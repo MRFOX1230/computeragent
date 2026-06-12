@@ -26,7 +26,7 @@ from operate.utils.label import (
 from operate.utils.ocr import get_text_coordinates, get_text_element
 # from operate.utils.screenshot import capture_screen_with_cursor, compress_screenshot
 
-GOOGLE_API_KEY = "AIzaSyC3mUqiDEJrW4MNohe_a88j18i2s32CEVY"
+GOOGLE_API_KEY = "ваш_api_ключ_gemini"
 
 client_state = {
     "sid": None,
