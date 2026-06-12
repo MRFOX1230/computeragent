@@ -1,0 +1,88 @@
+[project]
+name = "self-operating-computer"
+version = "0.3.40"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = "==3.11.*"
+# Модификация
+dependencies = [
+  "torch @ https://download.pytorch.org/whl/cu121/torch-2.4.0%2Bcu121-cp311-cp311-linux_x86_64.whl#sha256=a9fff32d365e0c74b6909480548b2e291314a204adb29b6bb6f2c6d33f8be26c",
+  "torchvision @ https://download.pytorch.org/whl/cu121/torchvision-0.19.0%2Bcu121-cp311-cp311-linux_x86_64.whl#sha256=3694d527b48fae26c6ac4a435960b8b5793d61c5f1420b6befb94b33c9a6fcd8",
+  "torchaudio @ https://download.pytorch.org/whl/cu121/torchaudio-2.4.0%2Bcu121-cp311-cp311-linux_x86_64.whl#sha256=29c8c43a49b4303667bf20cd85c3f6e9ba2b4a0fb4b6aaec2e02b3b2d6cc6cea",
+  "annotated-types==0.6.0",
+  "anyio==3.7.1",
+  "certifi==2023.7.22",
+  "charset-normalizer==3.3.2",
+  "colorama==0.4.6",
+  "contourpy==1.2.0",
+  "cycler==0.12.1",
+  "distro==1.8.0",
+  "EasyProcess==1.1",
+  "entrypoint2==1.1",
+  "exceptiongroup==1.1.3",
+  "fonttools==4.44.0",
+  "h11==0.14.0",
+  "httpcore==1.0.2",
+  "httpx>=0.25.2",
+  "idna==3.4",
+  "importlib-resources==6.1.1",
+  "kiwisolver==1.4.5",
+  "matplotlib==3.8.1",
+  "MouseInfo==0.1.3",
+  "mss==9.0.1",
+  "numpy==1.26.1",
+  "openai==1.2.3",
+  "packaging==23.2",
+  "Pillow==10.1.0",
+  "prompt-toolkit==3.0.39",
+  "PyAutoGUI==0.9.54",
+  "pydantic==2.4.2",
+  "pydantic_core==2.10.1",
+  "PyGetWindow==0.0.9",
+  "PyMsgBox==1.0.9",
+  "pyparsing==3.1.1",
+  "pyperclip==1.8.2",
+  "PyRect==0.2.0",
+  "pyscreenshot==3.1",
+  "PyScreeze==0.1.29",
+  "python3-xlib==0.15",
+  "python-dateutil==2.8.2",
+  "python-dotenv==1.0.0",
+  "pytweening==1.0.7",
+  "requests==2.31.0",
+  "rubicon-objc==0.4.7",
+  "six==1.16.0",
+  "sniffio==1.3.0",
+  "tqdm==4.66.1",
+  "typing_extensions==4.8.0",
+  "urllib3==2.0.7",
+  "wcwidth==0.2.9",
+  "zipp==3.17.0",
+  "google-generativeai==0.3.0",
+  "aiohttp==3.9.1",
+  "ultralytics==8.0.227",
+  "easyocr==1.7.1",
+  "ollama==0.1.6",
+  "anthropic",
+]
+
+
+
+
+[project.urls]
+repository = "https://github.com/OthersideAI/self-operating-computer"
+
+
+
+[tool.ruff]
+lint.select = [
+  "N805", # invalid-first-argument-name-for-method
+  "S307", # suspicious-eval-usage
+  "S102", # exec
+  "T",    # print-usage
+  "W",
+  # The "F" series in Ruff stands for "Pyflakes" rules, which catch various Python syntax errors and undefined names.
+  # See all rules here: https://docs.astral.sh/ruff/rules/#pyflakes-f
+  "F",
+]
+exclude = ["*.ipynb"]

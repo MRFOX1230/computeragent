@@ -1,0 +1,29 @@
+# Указываем версию формата файла. 3.8 - хорошая современная версия.
+version: "1.0"
+
+# В этой секции описываются все наши контейнеры (сервисы)
+services:
+  # Даем имя нашему сервису, например, "comfyui"
+  comfyui:
+
+    build: .
+
+    image: computeragent
+
+    container_name: computeragent_container
+    
+    restart: unless-stopped
+    
+    ports:
+      - "9003:9003"
+      
+    # Секция для выделения ресурсов, включая GPU.
+    # Это современный способ предоставления доступа к GPU.
+    # Заменяет флаг --gpus all
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
